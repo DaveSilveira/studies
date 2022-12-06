@@ -1,0 +1,88 @@
+<html>
+<head><title>Advinhe um número</title>
+<style>
+body{
+background-color:#0000;
+font-family: Sans-serif;
+}
+#jogo{
+margin:0 auto;
+width: 50%;
+max-width: 800px;
+min-width: 480px;
+}
+.form input[type="number"] {
+ width: 200px;
+}
+.lastResult{
+color: white;
+padding: 3px;
+</style>
+</head>
+<body>
+<div id="jogo">
+<a href="index.html">Voltar para o inicio</a>
+</div>
+<h1>Advinhe o número</h1>
+<p>Selecionei um número de 1 a 100. Vamos ver se você consegue advinhar em 10 chances. Te direi se seu palpite foi muito baixo ou muito alto. Que os jogos comecem!</p>
+    <div class="form">
+      <label for="campoPalpite">Escreva um número: </label>
+      <input type="number" min="1" max="100" required id="campoPalpite" class="campoPalpite">
+      <input type="submit" value="Marcar" class="envioPalpite">
+    </div>
+    <div class="contagemPalpites">
+      <p class="palpites"></p>
+      <p class="ultimoResultado"></p>
+      <p class="baixoOuAlto"></p>
+    </div>
+
+<script>
+var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+
+var palpites = document.querySelector('.palpites');
+var ultimoResultado = document.queySelector('.ultimoResultado');
+var baixoOuAlto = document.querySelector('baixoOuAlto');
+
+var envioPalpite = document.querySelector('envioPalpite');
+var campoPalpite = document.querySelector('campoPalpite');
+
+var contagemPalpites = 1;
+var botaoReinicio;
+
+function conferirPalpite() {
+var palpiteUsuario = Number(campoPalpite.value);
+	if (contagemPalpites === 1) {
+	palpites.textContent = 'Palpites anteriores';
+}
+palpites.textContent += palpitesUsuario + ' ';
+
+	if (palpitesUsuario === numeroAleatorio) {
+ultimoResultado.textContent = 'Parabéns você acertou!';
+ultimoResultado.style.backgorundColor = 'green';
+baixoOuAlto.textContent = '';
+configFimDeJogo();
+}
+	else if(contagemPalpites === 10) {
+ultimoResultado.textContent = '!!!FIM DE JOGO!!!';
+baixoOuAlto.textContent = '';
+configFimDeJogo();
+}
+	else{
+ultimoResultado.textContent = 'Errado!';
+ultimoResultado.style.backgroundColor = 'red';
+if(palpiteUsuario < numeroAleatorio) {
+baixoOuAlto.textContent = 'Seu palpite está muito alto!';
+}
+}
+
+contagemPalpites++;
+campoPalpite.value = '';
+campoPalpite.focus();
+}
+
+// VERIFICAR ERRO NO CONSOLE
+// https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash#pensando_como_um_programador
+
+</script>
+</body>
+</html>
