@@ -2,16 +2,25 @@
 	box-sizing:border-box;
 }
 body{
-	background-color: black;
+	background-color: gray;
 	color: white;
 	font-family: sans-serif;
 }
+#fundo{
+	margin-left:20%;
+	margin-right:20%;
+	background-color: black;
+	height: 100%;
+}
 #titulo{
 	text-align:center;
+	border: 2px solid white;
+	margin-top: 2px;
 }
 #corpo{
 	border: 2px solid white;
 	padding: 2%;
+	height: 60%;
 	margin: 20px auto;
 	text-align:center;
 }
@@ -19,6 +28,7 @@ body{
 	border: 2px solid white;
 	text-align: center;
 }
+
 #palavra{
 	background-color: gray;
 	font-size: 16px;
@@ -33,6 +43,22 @@ body{
 	text-align: center;
 	color: white;
 	width: 60px;
+	height: 30px;
+}
+#pwdPalavra{
+	background-color: gray;
+	font-size: 16px;
+	padding-left: 10px;
+	color: white;
+	width: 360px;
+	height: 30px;
+}
+#pwdAleatorio{
+	background-color: gray;
+	font-size: 16px;
+	padding-left: 10px;
+	color: white;
+	width: 360px;
 	height: 30px;
 }
 a{
