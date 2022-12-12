@@ -1,0 +1,30 @@
+<!-- Documento escrito em Notepad++ -->
+<html>
+<head>
+<title>Desafio antecessor e sucessor</title>
+<style type"text/css">
+body{
+font-family: sans-serif;
+}
+button{
+width: 80px;
+heigth: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Olá me ajude a cumprir este desafio</h1>
+<button onclick="questionario()">Antecessor e sucessor</button>
+<p>Clique no botão acima, este desafio faz parte dos desafios de javascript do professor <strong><a href="https://github.com/gustavoguanabara/javascript/">Gustavo Guanabara</a></strong>.</p>
+<script>
+function questionario(){
+
+var numero = Number(window.prompt('Digite um número'));
+var adição = numero + 1;
+var subtração = numero - 1;
+
+window.alert(`Antes de ${numero} temos ${subtração}. Depois dele temos ${adição}.`);
+}
+</script>
+</body>
+</html>
