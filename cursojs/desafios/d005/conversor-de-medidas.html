@@ -10,19 +10,54 @@ button{
 width: 80px;
 heigth: 20px;
 }
+#corpo{
+border: 2px solid black;
+margin: 20%;
+padding: 10px;
+}
+input{
+width: 40px;
+}
 </style>
 </head>
 <body>
-<h1>Conversor de medidas</h1>
-<input type="number" value="Insira um numero" id="valor"></input>
+<div id="corpo">
+<center><h1>Conversor de medidas</h1>
+
+<input type="number" id="valor"></input>
 
 <button onclick="converter()">Converter</button>
 
-<p id="resposta"></p>
+<p id="saida" ></p>
 
 <p>Clique no botão acima, este desafio faz parte dos desafios de javascript do professor <strong><a href="https://github.com/gustavoguanabara/javascript/">Gustavo Guanabara</a></strong>.</p>
+</center>
+</div>
 
-<script src="conversor.js"></script>
+<script>
+window.alert('Teste');
+
+function converter(){
+
+//Verificar por que a variavel não recebe o numero
+var valor = document.getElementById(valor);
+console.log(typeof(valor));
+
+//Verificar o que está acontecendo aqui, por que os valores não são gerados
+var mm = valor / 1000;
+var cm = valor / 100;
+var dm = Math.floor(valor) / 10; //verificar se é a forma
+var Dam = valor * 10;
+var Hm = valor * 100;
+var km = valor * 1000;
+
+//verificar porque quando tento imprimir na pagina gera erro
+
+alert(`A distância de ${valor} metros corresponde a: \n  
+ ${mm} Milimetros \n ${cm} Centimetros \n ${dm} Decimetros \n ${Dam} Dacametros \n ${Hm} Hectômetros \n ${km} Quilometros`)
+
+}
+</script>
 
 </body>
 </html>
