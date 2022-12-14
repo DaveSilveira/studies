@@ -2,28 +2,7 @@
 <html>
 <head>
 <title>Conversor de medidas</title>
-<style type"text/css">
-body{
-font-family: sans-serif;
-background-color: #003DF0;
-color: white;
-}
-button{
-width: 80px;
-heigth: 20px;
-}
-#corpo{
-border: 2px solid white;
-margin: 20%;
-padding: 10px;
-}
-input{
-width: 40px;
-}
-a{
-color: white;
-}
-</style>
+<link rel="stylesheet" type"text/css" href="style.css" />
 </head>
 <body>
 <div id="corpo">
@@ -31,7 +10,7 @@ color: white;
 <p>Selecione um valor em metros e clique em confirmar:</p>
 
 <input id="valor" type="number" value="">Metros
-<button onclick="converter()">Converter</button>
+<button id="botao" onclick="converter()">Converter</button>
 
 <p id="saida" ></p>
 
