@@ -28,38 +28,18 @@ color: white;
 <body>
 <div id="corpo">
 <center><h1>Conversor de medidas</h1>
-<p><strong>Próxima melhoria a ser realizada: receber o codigo da caixa a baixo. Mais por enquanto clique direto em confirmar:</strong></p>
-<input type="number" id="valor"></input>
+<p>Selecione um valor em metros e clique em confirmar:</p>
 
+<input id="valor" type="number" value="">Metros
 <button onclick="converter()">Converter</button>
 
 <p id="saida" ></p>
 
 <p>Clique no botão acima, este desafio faz parte dos desafios de javascript do professor <strong><a href="https://github.com/gustavoguanabara/javascript/">Gustavo Guanabara</a></strong>.</p>
+<p>Referência complementar: <a href="https://www.javascriptprogressivo.net/2018/07/Recebendo-Valor-Usuario-Formulario-Input-JavaScript.htmlhttps://github.com/gustavoguanabara/javascript/">JS progressivo</a></p>
 </center>
 </div>
-
-<script>
-function converter(){
-
-/*Verificar a forma de receber o codigo pelo input. Quando crio o link de recebimento pelo input o typeof se torna objeto
-var valor = document.getElementById(valor); >> typeof objetct
-*/
-var valor = window.prompt('Digite um valor em metros para ser convertido:');
-console.log(typeof(valor));
-
-var mm = valor * 1000;
-var cm = valor * 100;
-var dm = Math.floor(valor) * 10; //Forma alternativa importando a função Math
-var Dam = valor / 10;
-var Hm = valor / 100;
-var km = valor / 1000;
-
-alert(`A distância de ${valor} metros corresponde a: \n  
- ${mm} Milimetros \n ${cm} Centimetros \n ${dm} Decimetros \n ${Dam} Dacametros \n ${Hm} Hectômetros \n ${km} Quilometros`)
-
-}
-</script>
+<script src="conversor.js"></script>
 
 </body>
 </html>
