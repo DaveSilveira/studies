@@ -5,25 +5,30 @@
 <style type"text/css">
 body{
 font-family: sans-serif;
+background-color: #003DF0;
+color: white;
 }
 button{
 width: 80px;
 heigth: 20px;
 }
 #corpo{
-border: 2px solid black;
+border: 2px solid white;
 margin: 20%;
 padding: 10px;
 }
 input{
 width: 40px;
 }
+a{
+color: white;
+}
 </style>
 </head>
 <body>
 <div id="corpo">
 <center><h1>Conversor de medidas</h1>
-
+<p><strong>Próxima melhoria a ser realizada: receber o codigo da caixa a baixo. Mais por enquanto clique direto em confirmar:</strong></p>
 <input type="number" id="valor"></input>
 
 <button onclick="converter()">Converter</button>
@@ -35,23 +40,20 @@ width: 40px;
 </div>
 
 <script>
-window.alert('Teste');
-
 function converter(){
 
-//Verificar por que a variavel não recebe o numero
-var valor = document.getElementById(valor);
+/*Verificar a forma de receber o codigo pelo input. Quando crio o link de recebimento pelo input o typeof se torna objeto
+var valor = document.getElementById(valor); >> typeof objetct
+*/
+var valor = window.prompt('Digite um valor em metros para ser convertido:');
 console.log(typeof(valor));
 
-//Verificar o que está acontecendo aqui, por que os valores não são gerados
-var mm = valor / 1000;
-var cm = valor / 100;
-var dm = Math.floor(valor) / 10; //verificar se é a forma
-var Dam = valor * 10;
-var Hm = valor * 100;
-var km = valor * 1000;
-
-//verificar porque quando tento imprimir na pagina gera erro
+var mm = valor * 1000;
+var cm = valor * 100;
+var dm = Math.floor(valor) * 10; //Forma alternativa importando a função Math
+var Dam = valor / 10;
+var Hm = valor / 100;
+var km = valor / 1000;
 
 alert(`A distância de ${valor} metros corresponde a: \n  
  ${mm} Milimetros \n ${cm} Centimetros \n ${dm} Decimetros \n ${Dam} Dacametros \n ${Hm} Hectômetros \n ${km} Quilometros`)
