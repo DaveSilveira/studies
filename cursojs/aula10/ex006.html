@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" conterent="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area{
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja...
+    </div>
+    <script>
+    var a = window.document.getElementById('area');
+/* Assim é a melhor forma, pois não fica acumulando o HTML
+    a.addEventListener('click' clicar);
+    a.addEventListener('mouseenter' entrou);
+    a.addEventListener('mouseout' saiu);
+*/
+        function clicar(){
+            a.innerText = 'clicou';
+            a.style.backgroundColor ='red';
+        }
+        function entrou(){
+            a.innerText='entrou';
+        }
+        function saiu(){
+            a.innerText='saiu';
+        }
+    </script>
+</body>
+</html>
