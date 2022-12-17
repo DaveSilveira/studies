@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Nacionalidade</title>
+    <style>
+        body{
+            background-color: #008db8;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            position: relative;
+    
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Nacionalidade</h1>
+        <p>Qual seu país de origem: <input type="text" name="origem" id="origem"></p>
+        <p>Em que país você está no momento: <input type="text" name="estou" id="estou"></p>
+        <p><input type="button" value="Verificar" onclick="verificar()"></p>
+        <div id="recebe"></div>
+    </div>
+    <script>
+        function verificar(){
+
+        var origem = document.getElementById('origem').value; //sem o ponto value o teste não funciona
+        var estou = document.getElementById('estou').value;
+        var recebe = document.getElementById('recebe');
+console.log(origem)
+console.log(estou)
+            if(origem == estou){ //Sem o value ao puxar a variavel o if compara as duas palavras
+                recebe.innerHTML = `Você é cidadão de ${origem}`;
+            } else{
+                recebe.innerHTML = 'Você é estrangeiro.';
+            }
+        }
+    </script>
+</body>
+</html>
