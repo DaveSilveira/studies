@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Diluições</title>
+<style>
+*{border-sizing: border-box;}
+body{
+font-family:sans-serif;
+}
+#corpo {
+width: 500px;
+margin: auto;
+}
+#formu{
+text-align: left;
+}
+.recebe{
+width: 50px;
+}
+</style>
+</head>
+<body>
+
+<section id="cabecalho"></section>
+<section id="corpo">
+<div>
+<form id="formu">
+
+<p>Digite o valor da  massa molar: <input class="recebe" type="number" step="0.01" value="" id="MM"> P.M</p>
+<p>Digite o valor da massa: <input class="recebe" type="number" step="0.01" value="" id="m"> g</p>
+<p>Digite o valor do volume: <input class="recebe" type="number" step="0.01" value="" id="vol"> L</p>
+<p>Digite o valor da molaridade: <input class="recebe" type="number" step="0.01" value="" id="mol"> mol/L</p>
+<p>Digite o valor da densidade: <input class="recebe" type="number" step="0.01" value="" id="densi"> g</p>
+<p>Digite o valor da teor: <input class="recebe" type="number" step="0.1" value="" id="teor">%</p>
+<p><input type="radio" value="" checked="checked()">Molaridade</input>
+<input type="radio" value="">Volume</input>
+<input type="radio" value="">Massa</input>
+<input type="radio" value="" >Peso Molecular</input>
+</p>
+<input type="button" onclick="onclick()" value="Enviar">
+</form>
+<p>Para saber a quantidade para diluir é necessário saber as informações como o volume desejado, massa (ou peso) molecular,
+molaridade, massa do diluto, além da densidade e o teor (que se apresenta em porcentagem). Para a diluição de líquidos é necessário
+saber a concentração do analito fora o veiculo, por isso informações como a densidade e teor são importantes.</p>
+<p>A fórmula é Molaridade = massa / (Massa molar * volume)</p>
+</div>
+</section>
+<section id="rodape"></section>
+
+<script src="diluições.js">
+</script>
+</body>
+</html>
