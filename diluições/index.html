@@ -10,14 +10,22 @@
 </section>
 <section id="corpo">
 <div>
-<form id="formu">
 
-<p>Digite o valor da  massa molar: <input class="recebe" type="number" step="0.01" value="0.00" id="MM"> P.M</p>
-<p>Digite o valor da massa: <input class="recebe" type="number" step="0.01" value="0.00" id="m"> g</p>
-<p>Digite o valor do volume: <input class="recebe" type="number" step="0.01" value="0.00" id="vol"> L</p>
-<p>Digite o valor da molaridade: <input class="recebe" type="number" step="0.01" value="0.00" id="mol"> mol/L</p>
-<p>Digite o valor da densidade: <input class="recebe" type="number" step="0.01" value="0.00" id="densi"> g</p>
-<p>Digite o valor da teor: <input class="recebe" type="number" step="0.1" value="0.00" id="teor">%</p>
+<!-- A ideia é colocar todas as conversões realizadas durante o aprendizado neste documento-->
+<label for="selecao">Selecione um valor:</label>
+<select id="selecao">
+<option></option>
+<option id="diluicao" onclick="dilui()">Diluição</option>
+<option id="metro" onclick="metro()">Conversão métrica</option>
+</select>
+
+<!-- diluição
+<p>Digite o valor da  massa molar: <input class="recebe" type="number" step="0.01" id="MM"> P.M</p>
+<p>Digite o valor da massa: <input class="recebe" type="number" step="0.01" id="m"> g</p>
+<p>Digite o valor do volume: <input class="recebe" type="number" step="0.01" id="vol"> L</p>
+<p>Digite o valor da molaridade: <input class="recebe" type="number" step="0.01" id="mol"> mol/L</p>
+<p>Digite o valor da densidade: <input class="recebe" type="number" step="0.01" id="densi"> g</p>
+<p>Digite o valor da teor: <input class="recebe" type="number" step="0.1" id="teor">%</p>
 	<p><input type="radio" name="und" id="mola"value="" checked>Molaridade</input>
 	<input type="radio" name="und" id="vlm" value="">Volume</input>
 	<input type="radio" name="und" id="mss" value="">Massa</input>
@@ -30,7 +38,9 @@
 molaridade, massa do diluto, além da densidade e o teor (que se apresenta em porcentagem). Para a diluição de líquidos é necessário
 saber a concentração do analito fora o veiculo, por isso informações como a densidade e teor são importantes.</p>
 <p>A fórmula é Molaridade = massa / (Massa molar * volume)</p>
-</div>
+</div> -->
+
+
 </section>
 <section id="rodape">
 <p>Criado por DaveSilveira - 2022 <a href="https://github.com/DaveSilveira">GitHub</a>

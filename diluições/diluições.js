@@ -28,7 +28,7 @@ var und = document.getElementsByName('und');
 		res.innerHTML = `O valor da massa é ${m}`;
 	} else if (und[0].checked) {
 		mol = m / (MM * vol);
-		res.innerHTML =`O valor da molaridade é: ${mol}`;
+		res.innerHTML = `O valor da molaridade é: ${mol}`;
 	} else if (und[1].checked){
 		vol =  m / (MM * mol);
 		res.innerHTML = `O valor do volume é: ${vol}`;
