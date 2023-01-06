@@ -1,0 +1,23 @@
+body{
+	background-color: #4169E1;
+	font-family: sans-serif;
+}
+.escopo-geral{
+	background-color: #ADD8E6;
+	text-coler: #ffff;
+	margin: 200px auto;
+	width: 50%;
+	height: 60%;
+	border-radius: 15px;
+}
+.titulo{
+	text-align:center;
+	padding-top: 6px;
+}
+.corpo{
+	height: 80px
+}
+.rodape{
+	text-align:center;
+	padding-bottom: 6px;
+}
