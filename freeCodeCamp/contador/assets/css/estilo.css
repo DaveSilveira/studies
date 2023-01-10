@@ -1,0 +1,35 @@
+body{
+	background-color: #ffff;
+	font-family:sans-serif;
+}
+.escopo-geral{
+	box-sizing: border-box;
+	margin:auto;
+	width:95%;
+	height:98%;
+	position: absolute;
+	border: 1px solid #000000;
+}
+.corpo{
+	width: 60px;
+	height: 80px;
+	margin: 40% auto;
+}
+h1{
+	font-size: 62pt;
+}
+.rodape{
+	position: fixed;
+	bottom: 0.5%;
+	width: 98%;
+	text-align: center;
+	font-size: 8pt;
+}
+a:link, a:hover, a:visited{
+	color: #000000;
+	text-decoration: none;
+}
+a:hover{
+	background-color: #000000;
+	color: #ffff;
+}

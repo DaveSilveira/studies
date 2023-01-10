@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
+
+body{
+	font-family: tajawal, sans-serif;
+	font-size: 14pt;
+	background-color: #87CEEB;
+}
+.escopo-geral{
+	margin: 2px auto;
+	width: 40%;
+	background-color: #ADD8E6;
+	border-radius: 20px;
+}
+.titulo, .corpo, .rodape{
+	margin: 2px auto;
+	width: 80%;
+}
+.titulo{
+	text-align: center;
+	padding: 20px;
+}
+.corpo{
+	padding: 20px;
+}
+.rodape{
+	text-align:center;
+	padding: 20px;
+}
+a:link, a:visited{
+	color: #000000;
+	text-decoration: none;
+}
+a:hover{
+	background-color: #000000;
+	color: #ADD8E6;
+}

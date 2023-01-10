@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans:wght@400;800&display=swap');
+
+body{
+	background-color: #000000;
+	font-family: Arvo;
+	color: #fff;
+	font-size: 8pt;
+}
+.escopo-geral{
+	position: fixed;
+	left: 4px;
+	bottom: 6px;
+	}
+a:link, a:visited, a:hover{
+	color: #ffff;
+	text-decoration: overline;
+}
+.corpo{
+	border: 1px solid #fff;
+	margin-bottom: 1px;
+	width: 130px;
+	max-height: 14px;
+}
+div{
+	display: inline-block;
+}
