@@ -1,20 +1,12 @@
-const corpo = document.querySelector('.corpo');
+const escopo = document.querySelector('.escopo-geral');
+const contar = document.querySelector('.contar');
+const zerar = document.querySelector('.zerar');
+let valor = 0;
+contar.innerHTML = valor;
 
-function criaH1(){
-	let h1 = document.createElement('h1');
-	return h1;
-}
-function criaBtn(){
-	let btn = document.createElement('button');
-	return btn;
-}
-
-function contador(){
-	let contar = criaH1();
-	corpo.appendChild(contar);
-	contar = Number(0);
-	console.log(contar)
-	return contar;
-}
-
-contador();
+escopo.addEventListener('click', function(){
+	contar.innerHTML = `${valor++}`;
+});
+zerar.addEventListener('click', function(){
+	contar.innerHTML = `${valor = 0}`;
+});
