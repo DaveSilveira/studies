@@ -1,20 +1,27 @@
-const corpo = document.querySelector('.corpo');
+const corpo = document.querySelector('.corpo')
 
-function criaH1(){
-	let h1 = document.createElement('h1');
-	return h1;
+function criaDiv(){
+    let div = document.createElement('div')
+    return div
 }
-function criaBtn(){
-	let btn = document.createElement('button');
-	return btn;
-}
-
-function contador(){
-	let contar = criaH1();
-	corpo.appendChild(contar);
-	contar = Number(0);
-	console.log(contar)
-	return contar;
+function criaP(){
+    let p = document.createElement('p')
+    return p
 }
 
-contador();
+const review = [
+    {
+        foto: '',
+        nome: '',
+        profissao: '',
+        comentario: '',
+
+    }
+]
+
+corpo.addEventListener('DOMContentLoaded', function(){
+    let foto = criaDiv()
+    let nome = criaP()
+    let profissao = criaP()
+    let comentario = criaP()
+});
