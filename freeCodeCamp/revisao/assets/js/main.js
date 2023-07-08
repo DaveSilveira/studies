@@ -12,15 +12,29 @@ const review = [
 const btnVolta= document.querySelector('.volta')
 const btnFrente = document.querySelector('.frente')
 const aleatorio = document.querySelector('.aleatorio')
+
 let item = 0;
 
 document.addEventListener('DOMContentLoaded', function(){
-
     foto.style.backgroundImage = review[item].foto
     nome.textContent = review[item].nome
     profissao.textContent = review[item].profissao
     comentario.textContent = review[item].comentario
 });
-btnFrente.addEventListener('click', ()=> item++)
-btnFrente.addEventListener('click', ()=> item - 1)
-aleatorio.addEventListener('click', ()=> item = Math.floor(Math.random() * review.length))
+btnFrente.addEventListener('click', ()=>{
+    item = ++item
+    foto.style.backgroundImage = review[item].foto
+    nome.textContent = review[item].nome
+    profissao.textContent = review[item].profissao
+    comentario.textContent = review[item].comentario
+    console.log(item)
+})
+btnFrente.addEventListener('click', ()=> item = item - 1)
+aleatorio.addEventListener('click', ()=> {
+    item = Math.floor(Math.random() * review.length)
+    
+    foto.style.backgroundImage = review[item].foto
+    nome.textContent = review[item].nome
+    profissao.textContent = review[item].profissao
+    comentario.textContent = review[item].comentario
+})

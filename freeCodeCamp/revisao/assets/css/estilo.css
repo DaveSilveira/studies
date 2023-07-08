@@ -17,10 +17,10 @@ body{
 }
 .titulo{
 	text-align: center;
-	padding: 20px;
+	padding: 10px;
 }
 .corpo{
-	padding: 20px;
+	padding: 10px;
 }
 .rodape{
 	text-align:center;
@@ -34,7 +34,19 @@ a:hover{
 	background-color: #000000;
 	color: #ADD8E6;
 }
+.mural{
+	text-align: center;
+	background-color: white;
+	border-radius: 30px;
+	padding: 20px;
+	font-size: 12px;
+}
 .foto{
 	width: 80px;
 	height: 80px;
+	margin: auto;
+}
+p{
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
