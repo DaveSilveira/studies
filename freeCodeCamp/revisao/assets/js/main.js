@@ -34,7 +34,7 @@ btnFrente.addEventListener('click', ()=>{
     console.log(item)
 })
 btnVolta.addEventListener('click', ()=> {
-    item = --item 
+    item = --item
     console.log(item)
     if(item == 0) item = review.length //verificar
     foto.style.backgroundImage = review[item].foto
@@ -50,4 +50,4 @@ aleatorio.addEventListener('click', ()=> {
     nome.textContent = review[item].nome
     profissao.textContent = review[item].profissao
     comentario.textContent = review[item].comentario
-})
+});
