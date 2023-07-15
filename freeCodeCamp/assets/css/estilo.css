@@ -41,4 +41,9 @@ a:hover{
 .navbar{
 	width: 100%;
 	background-color: #ADD8E6;
+	display: flex;
+	flex-direction: row;
+}
+.botao{
+	margin: 4px 10px 0px 10px;
 }
