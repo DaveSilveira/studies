@@ -19,17 +19,19 @@ function themeSelector(fundo, primeiroPlano, fonte, nome){
     navbar.appendChild(cor)
     cor.style.cssText = `width:10px; height:10px; margin:2px 2px auto; border-radius:50px; 
     border:1px solid #ffff; display:block; background-color:${fundo}`
-
     cor.addEventListener('click', () => {
         document.body.style.backgroundColor = fundo;
         document.body.style.color = fonte;
         links.style.backgroundColor = fonte;
         navbar.style.backgroundColor = primeiroPlano;
         escopo.style.backgroundColor = primeiroPlano;
+        nomeCor.innerText = nome;
     });
-    nomeCor.innerText = nome;
 }
-tema.addEventListener('click', function(){
-themeSelector('#000000', '#363636','#EEEEEE','Noite');
-themeSelector('#FFFFFF', '#EEFEEE', '#262626', 'Dia');
+tema.addEventListener('mouseover', function(){
+    let caixaCor = criaDiv()
+caixaCor.innerHTML = `${themeSelector('#000000', '#363636','#EEEEEE','Noite')}
+${themeSelector('#FFFFFF', '#EEFEEE', '#262626', 'Dia')}`
+tema.addEventListener('mouseout', function(){caixaCor.style.display='none'}) //ver
 })
+
