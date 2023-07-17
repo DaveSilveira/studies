@@ -46,4 +46,5 @@ a:hover{
 }
 .botao{
 	margin: 4px 10px 0px 10px;
+	cursor: pointer;
 }
