@@ -1,0 +1,4 @@
+este é o teste 1 para o programa
+
+Observação 1, quando o programa não estiver na mesma pasta é necessário adicionar o caminho dele
+lembrando que para escrever \ em C se escreve \\, pois o primeiro é um caractere especial.

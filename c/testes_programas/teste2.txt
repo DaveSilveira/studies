@@ -1,0 +1,3 @@
+este é o teste 2 para o programa abridor
+
+Não é necessário depurar um programa para que ele seja transformado em executável.
