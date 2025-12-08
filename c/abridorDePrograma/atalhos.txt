@@ -1,0 +1,3 @@
+C:\Windows\System32\Notepad.exe
+C:\Windows\System32\Calc.exe
+C:\Windows\System32\Notepad.exe

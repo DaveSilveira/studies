@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(){
 
@@ -10,6 +11,7 @@ int main(){
     FILE *arquivoDeLeitura;
     arquivoDeLeitura = fopen("atalhos.txt", "r");
 
+    //condicional para verificação da existencia de atalhos.txt
     if (arquivoDeLeitura == NULL){
     //Criação do arquivo de leitura
     FILE *arquivoDeLeitura;
@@ -36,7 +38,34 @@ int main(){
     fclose(arquivoDeLeitura);
     }
 
-    printf("Aplicativos verificados em atalhos.txt");
+    //leitura das linhas dos caminhos para execução
+    fgets(aplicativo1, 99, arquivoDeLeitura);
+    fgets(aplicativo2, 99, arquivoDeLeitura);
+    fgets(aplicativo3, 99, arquivoDeLeitura);
+
+    fclose(arquivoDeLeitura);
+
+    //removendo a quebra de linha
+    aplicativo1[strcspn(aplicativo1, "\n")] = 0;
+    aplicativo2[strcspn(aplicativo2, "\n")] = 0;
+    aplicativo3[strcspn(aplicativo3, "\n")] = 0;
+
+    char comando [100];
+
+    printf("Aplicativos verificados em atalhos.txt \n");
+
+    printf("Abrindo programa 1...\n");
+    sprintf(comando, "start \"\" \%s\"", aplicativo1);
+    system(comando);
+
+    printf("Abrindo programa 2...\n");
+    sprintf(comando, "start \"\" \%s\"", aplicativo2);
+    system(comando);
+
+    printf("Abrindo programa 3...\n");
+    sprintf(comando, "start \"\" \%s\"", aplicativo3);
+    system(comando);
+
     system("pause");
 
     return(0);
