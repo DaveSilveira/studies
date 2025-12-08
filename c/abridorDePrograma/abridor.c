@@ -5,6 +5,7 @@
 int main(){
 
     printf("...:::---+++ ABRIDOR DE PROGRAMAS +++---:::...\n");
+    printf("\n2025 - DaveSilveira\n");
 
     char aplicativo1[100], aplicativo2[100], aplicativo3[100];
     //verificação da existência do arquivo de leitura
@@ -34,6 +35,8 @@ int main(){
 
     printf("O local 3 corresponde a: %s. \n", aplicativo3);
     fprintf(arquivoDeLeitura,"%s \n", aplicativo3);
+
+    fprintf(arquivoDeLeitura, "\nEste arquivo foi criado automaticamente, serve somente para automatização de atalhos e sua exclusão não prejudica em nada nenhuma aplicação.");
 
     fclose(arquivoDeLeitura);
     }

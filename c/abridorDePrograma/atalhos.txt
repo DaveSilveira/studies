@@ -1,3 +1,4 @@
-C:\Windows\System32\Notepad.exe
-C:\Windows\System32\Calc.exe
-C:\Windows\System32\Notepad.exe
+c:\windows\system32\calc.exe 
+c:\windows\system32\notepad.exe 
+c:\windows\system32\paint.exe 
+Este arquivo foi criado automaticamente, serve somente para automatização de atalhos e sua exclusão não prejudica em nada nenhuma aplicação.
